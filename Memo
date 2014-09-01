@@ -1,0 +1,12 @@
+- 30日本の復習
+- そこからintel-VTを触ってみる
+- まずはCPUの仮想化
+- VMCSの設定、VM Entry、例外発生、VM Exit、例外補足をやってみる
+
+- qemu上で開発?
+
+- 32bit or 64bit
+ -> まずは32bitでやってみる
+- UEFI or BIOS
+ -> まずはBIOS
+
