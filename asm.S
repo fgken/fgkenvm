@@ -1,0 +1,2 @@
+label:
+	jmp label
