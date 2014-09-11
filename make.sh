@@ -1,4 +1,5 @@
 #!/bin/sh
-./compile.sh bootloader.S -o bootloader.bin
-./compile.sh fgkenvm.S -o fgkenvm.bin
-cat bootloader.bin fgkenvm.bin > fgkenvm-floppy.img
+./compile.sh bootloader.S
+./compile.sh fgkenvm-startup.S
+./compile-c.sh fgkenvm.c
+cat bootloader.bin fgkenvm-startup.bin fgkenvm.bin > fgkenvm-floppy.img
