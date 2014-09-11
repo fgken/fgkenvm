@@ -1,13 +1,14 @@
 
 void main(void)
 {
-	__asm__(".intel_syntax noprefix");
-	__asm__("mov ah, 0x0e");
-	__asm__("mov al, 0x42");
-	__asm__("mov bx, 15");
-	__asm__("int 0x10");
-	__asm__("int 0x10");
-	__asm__("int 0x10");
+	int i;
+
+	for(i=0xa0000; i <= 0xaffff - 0xffff/2; i++){
+		*(char *)i = 10;
+	}
+	for(; i <= 0xaffff; i++){
+		*(char *)i = 15;
+	}
 
 fin:
 	goto fin;
