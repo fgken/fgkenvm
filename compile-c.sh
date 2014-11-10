@@ -4,4 +4,4 @@
 #nasm ${1%.*}.nasm -o ${1%.*}.bin
 
 gcc -T script.ld -fno-asynchronous-unwind-tables -fno-builtin -fno-common -nostdinc -nostdlib -march=x86-64 $1
-
+objcopy -O binary -j .text a.out ${1%.*}.bin
